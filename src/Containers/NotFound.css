@@ -1,0 +1,26 @@
+.center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+}
+
+.image {
+	width: 20%;
+	height: 60%;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.item {
+	width: 50vw;
+}
+
+.description {
+	display: flex;
+	flex-direction: column;
+}
