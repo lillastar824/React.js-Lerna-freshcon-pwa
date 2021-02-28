@@ -1,0 +1,30 @@
+type Balance {
+	available: Float!
+	pending: Float!
+}
+
+input pricingInput {
+	market: ID!
+	price: Float!
+}
+
+input ProductInput {
+	name: String!
+	farmer: String!
+	category: Int!
+	metric: Int!
+	image: String!
+	dynamic: Boolean!
+	price: Float!
+	description: String!
+	facts: String!
+	pricing: [pricingInput!]
+	average: Int
+}
+
+type Query {
+	getBalance(acc: String): Balance
+}
+extend type Mutation {
+	stripeComplete(farmer: String, acc: String): Response
+}

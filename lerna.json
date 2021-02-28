@@ -1,0 +1,4 @@
+{
+	"packages": ["greenery", "shop", "farmer", "functions", "driver", "admin"],
+	"version": "0.0.0"
+}

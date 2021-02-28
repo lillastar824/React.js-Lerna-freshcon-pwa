@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto Condensed');
+
+@import 'pretty-checkbox/src/pretty-checkbox.scss';
+
+body {
+	font-family: 'Roboto';
+	color: rgba(0, 0, 0, 0.87);
+}
+
+button {
+	height: auto;
+	justify-content: center;
+}
+
+$steps-completed-color: #ef6c00;
+$steps-active-color: #ef6c00;
+$link: black;
+$body-family: 'Roboto';
+
+@import 'bulma';
+@import 'bulma-extensions';
+@import 'bulma-o-steps/bulma-steps.sass';
+[type='radio']:checked,
+[type='radio']:not(:checked) {
+	position: absolute;
+	left: -9999px;
+}
+[type='radio']:checked + label,
+[type='radio']:not(:checked) + label {
+	position: relative;
+	padding-left: 28px;
+	cursor: pointer;
+	line-height: 20px;
+	display: inline-block;
+	color: #ffffff;
+}
+[type='radio']:checked + label:before,
+[type='radio']:not(:checked) + label:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #ddd;
+	border-radius: 100%;
+	background: #fff;
+}
+[type='radio']:checked + label:after,
+[type='radio']:not(:checked) + label:after {
+	content: '';
+	width: 12px;
+	height: 12px;
+	background: #ef6c00;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	border-radius: 100%;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+[type='radio']:not(:checked) + label:after {
+	opacity: 0;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+[type='radio']:checked + label:after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.badge1 {
+	position: relative;
+}
+.badge1[data-badge]:after {
+	content: attr(data-badge);
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	font-size: 0.7em;
+	background: #ef6c00;
+	color: white;
+	width: 18px;
+	height: 18px;
+	margin-top: 0.5em;
+	margin-right: 0.5em;
+	text-align: center;
+	line-height: 15px;
+	border-radius: 50%;
+	box-shadow: 0 0 1px #333;
+}
+
+.accordion {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+	background-color: #b5b5b5;
+	display: flex;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	border-radius: 10px;
+}
+
+.accordion__button:hover {
+	background-color: #7cb342;
+	border-radius: 10px;
+	color: white;
+}
+
+.accordion__button:before {
+	display: inline-block;
+	background-color: #7cb342;
+	height: 10px;
+	width: 10px;
+	margin-right: 12px;
+	border-bottom: 2px solid currentColor;
+	border-right: 2px solid currentColor;
+}
+
+.accordion__button[aria-expanded='true'],
+.accordion__button[aria-selected='true'] {
+	background-color: #7cb342;
+}
+
+.accordion__panel {
+	padding: 20px;
+	animation: fadein 0.35s ease-in;
+}
+.button {
+	height: auto;
+}

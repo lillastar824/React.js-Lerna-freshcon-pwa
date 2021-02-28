@@ -1,24 +1,18 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+firebase-debug.log
+firestore-debug.log
+pubsub-debug.log
+functions/yarn-error.log
+node_modules
+**.directory
+.firebase
 
-# dependencies
-/node_modules
+**.env
 
-# testing
-/coverage
-
-# production
-/build
-
-# misc
+public/user
+public/farmer
+public/landing
+public/driver
+.idea
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-.env
-.vscode
+functions/.runtimeconfig.json
+functions/ui-debug.log

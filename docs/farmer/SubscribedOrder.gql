@@ -1,0 +1,63 @@
+{
+	marketName
+	numberOfOrders
+	totalOrderValue
+	sortBy(customer)
+	availableDrivers
+	timeline(new)
+	orders(customer): [
+		{
+			customerProfile
+			customerName,
+			deliveryAddress,
+			deliveryType,
+			orderAmount,
+			note,
+			products: [
+				{
+					image
+					name,
+					metric,
+					revenue,
+					status
+				}
+			]
+		}
+	]
+}
+
+{
+	marketName
+	numberOfOrders
+	totalOrderValue
+	sortBy(metric)
+	timeline(new)
+	orders(metric):[
+		{
+				image
+				name,
+				metric,
+				revenue,
+				status
+			
+		}
+	]
+}
+
+{
+	marketName
+	numberOfOrders
+	totalOrderValue
+	sortBy(metric)
+	timeline(years)
+	orders(metric):[
+		{
+				image
+				name,
+				metric,
+				revenue,
+				saleGraph
+		}
+	]
+}
+

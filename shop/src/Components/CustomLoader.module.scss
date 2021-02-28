@@ -1,0 +1,40 @@
+#sparkles > path {
+	animation: sparklyBits 1000ms infinite;
+	position: absolute;
+}
+
+#fresh > path {
+	position: absolute;
+	left: 0;
+}
+
+#message {
+	margin-top: 20px;
+	text-align: center;
+}
+
+@for $i from 1 through 29 {
+	#sparkles > path:nth-child(#{$i}) {
+		animation-delay: (35ms * $i);
+	}
+}
+
+@keyframes sparklyBits {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+// Boring Bit
+.loader {
+	align-items: center;
+	background-color: #fafafa;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	width: 100vw;
+}

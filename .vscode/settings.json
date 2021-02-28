@@ -1,0 +1,10 @@
+{
+	"eslint.workingDirectories": [
+		"./shop",
+		"./farmer",
+		"./functions",
+		"./driver",
+		"./greenery",
+		"./landing"
+	],
+}

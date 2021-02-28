@@ -1,0 +1,81 @@
+type Card {
+	id: String
+	brand: String
+	exp_month: Int
+	exp_year: Int
+	fingerprint: String
+	last4: String
+}
+extend type Query {
+	setupCard: String!
+	listAllCards: [Card!]
+	getDefaultCard: Card!
+}
+input AmountInput {
+	total: Float!
+	sum: Float!
+	fee: Float
+	donation: Float
+}
+input DeliveryInput {
+	type: String!
+	address: String!
+	note: String
+}
+
+input CartProduct {
+	name: String!
+	image: String!
+	qty: Float!
+	actual: Float!
+	price: Float!
+	ref: String!
+	total: Float!
+	farmer: String!
+}
+
+input CartMarket {
+	ref: String
+	name: String
+	image: String
+	sum: Float
+	products: [CartProduct!]
+}
+
+input CustomerInput {
+	name: String!
+	image: String!
+}
+
+input OrderInput {
+	customer: CustomerInput!
+	delivery: DeliveryInput!
+	sum: Float!
+	total: Float!
+	fee: Float!
+	donation: Float!
+	items: [CartMarket!]
+	completed: Boolean!
+	status: [String!]
+	paid: Boolean!
+}
+
+type IntentResponse {
+	secret: String!
+	status: String!
+}
+
+type Response {
+	result: String!
+}
+
+type Mutation {
+	setupIntent(amount: Float): IntentResponse
+	updateIntent(order: String, amount: Float, intent: String): IntentResponse
+	addCard(token: String): Card
+	setDefaultCard(source: String!): Boolean
+	deleteCard(id: String): Boolean
+	checkout(order: String, amount: Float, fees: Float): IntentResponse
+	preOrder(Order: OrderInput): Response
+	process(order: OrderInput, id: String): Response
+}

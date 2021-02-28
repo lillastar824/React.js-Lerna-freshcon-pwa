@@ -1,0 +1,20 @@
+# Write your query or mutation here
+mutation {
+  addOrder(input: {
+    customer: "bjp4UgfpCAaNn9XmaswidW4e2OT2",
+    location: {
+      latitude: 40.741895
+      longitude: -73.989308
+    },
+    note: "",
+    amount: 6.4,
+    qty: 2,
+    items: [{
+      id: "06m6mOeIk329zBlZPfkP",
+      qty:2
+      amount: 6.4
+    }]
+  }) {
+    result
+  }
+}

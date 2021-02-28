@@ -1,0 +1,50 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+  match /admin/images/stock/{image} {
+     allow read;
+    }
+    match /drivers/{driverId} {
+			allow read, update: if request.auth.uid == driverId
+			match /schedule/{marketId} {
+				allow read, create, update, delete: if request.auth.uid == driverId
+				match /orders/{orderId} {
+					allow read: if request.auth.uid == driverId
+				}
+			}
+		}
+    match /markets/{market} {
+      allow read;
+	  	allow write, create, update: if false;
+      match /products/{product} {
+        allow read;
+      }
+      match /farmers/{farmer} {
+      	allow read;
+      }
+    }
+    match /users/{userId} {
+      allow read, update, create: if request.auth.uid == userId;
+      match /orders/{orderId} {
+      	 allow create,read, update : if request.auth.uid == userId;
+      }
+      match /private/{doc=**} {
+				allow read, create, update: if request.auth.uid == userId
+			}
+			match /favorites/{favor} {
+				allow read, create, update, delete: if request.auth.uid == userId
+			}
+    }
+    match /farmers/{farmId} {
+      allow read, update, delete: if request.auth.uid == farmId;
+      match /products/{product=**} {
+      	allow create, read, update, delete: if request.auth.uid == farmId;
+      }
+      match /subscribed/{subscribed=**} {
+      	allow  create, read, update: if request.auth.uid == farmId;
+      }
+      match /private/{p=**} {
+      	allow  create, read: if request.auth.uid == farmId;
+      }
+    }
+	}
+}

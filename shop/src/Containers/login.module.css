@@ -1,0 +1,40 @@
+.pdfsec {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.loginfield {
+	width: 20em;
+	font-size: larger;
+	display: inline-flex;
+	place-content: center;
+}
+
+.logincont {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.subscribe {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+	.pdfsec {
+		margin: 1rem;
+	}
+	.loginfield {
+		width: 100%;
+		margin-bottom: 0.5em;
+	}
+	.logincont {
+		display: block;
+	}
+	.subscribe {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

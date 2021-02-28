@@ -1,0 +1,38 @@
+@import '../Components/ProductView.module.css';
+
+.level1 {
+	font-size: 24px;
+}
+.level2 {
+	font-size: 16px;
+}
+.mobileheader {
+	z-index: 10;
+	top: 63px;
+	width: 100%;
+	background-color: #ffffff;
+}
+
+@media (max-width: 576px) {
+	.tabview ul {
+		justify-content: space-between;
+	}
+}
+
+@media (min-width: 576px) {
+	.icondisplay {
+		display: none;
+	}
+	.tabview ul {
+		justify-content: center;
+	}
+	.tabview ul li a {
+		padding: 0.5em 3em;
+	}
+}
+
+@media (max-width: 720px) {
+	.onlyweb {
+		display: none;
+	}
+}

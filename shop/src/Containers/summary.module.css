@@ -1,0 +1,51 @@
+.button {
+	width: 100%;
+	display: inline-flex;
+	background-color: #ef6c00;
+	color: white;
+	place-content: center;
+	font-variant: small-caps;
+	font-weight: bolder;
+}
+.button:hover {
+	color: white;
+}
+.button:disabled {
+	background-color: #f18d3a;
+}
+.image {
+	width: 6rem;
+	height: 6rem;
+	object-fit: cover;
+	border-radius: 0.5em;
+}
+
+.summ {
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 6em;
+}
+@media only screen and (max-width: 800px) {
+	.summ {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.itembox {
+		padding: 0px;
+	}
+	.image {
+		height: 4rem;
+		width: 4rem;
+	}
+}
+@media only screen and (min-width: 600px) {
+	.mar {
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+
+	.cont {
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+}

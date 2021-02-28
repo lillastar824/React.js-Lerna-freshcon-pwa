@@ -1,0 +1,11 @@
+src/
+dist/
+stories/
+storybook/
+.babelrc
+.browserslistrc
+.eslintignore
+.eslintrc
+.git
+.directory
+*.tgz

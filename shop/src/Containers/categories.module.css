@@ -1,0 +1,15 @@
+.stick {
+	margin-bottom: 0;
+	background-color: white;
+	position: sticky;
+	top: 6.5em;
+	z-index: 8;
+}
+
+@media screen and (max-width: 30em) {
+	.stick {
+		position: sticky;
+		top: 9em;
+		z-index: 8;
+	}
+}

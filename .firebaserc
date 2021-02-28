@@ -1,0 +1,37 @@
+{
+  "projects": {
+    "default": "fresh-con",
+    "develop": "freshconn-develop"
+  },
+  "targets": {
+    "fresh-con": {
+      "hosting": {
+        "landing": [
+          "fresh-con"
+        ],
+        "driver": [
+          "driver-freshconn"
+        ],
+        "farmer": [
+          "farmer-freshconn"
+        ],
+        "shop": [
+          "user-freshconn"
+        ]
+      }
+    },
+    "freshconn-develop": {
+      "hosting": {
+        "shop": [
+          "freshconn-develop"
+        ],
+        "driver":[
+          "driver-staging-freshconn"
+        ],
+        "farmer": [
+          "farmer-staging-freshconn"
+        ]
+      }
+    }
+  }
+}

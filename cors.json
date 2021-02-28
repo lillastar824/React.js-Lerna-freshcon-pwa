@@ -1,0 +1,19 @@
+[
+	{
+		"origin": [
+			"http://localhost:3000/",
+			"http://localhost:8000/",
+			"https://farmer-staging-freshconn.web.app/",
+			"https://freshconn-develop.web.app/",
+			"https://driver-staging-freshconn.web.app",
+			"https://freshconn-develop.firebaseapp.com",
+			"https://farmer-staging-freshconn.firebaseapp.com",
+			"https://driver-staging-freshconn.firebaseapp.com",
+			"https://shop.freshconn.com",
+			"https://farmer.freshconn.com",
+			"https://driver.freshconn.com"
+		],
+		"method": ["GET"],
+		"maxAgeSeconds": 3600
+	}
+]

@@ -1,0 +1,25 @@
+.short {
+	display: flex;
+	justify-content: space-between;
+	place-items: center;
+}
+.default {
+	cursor: pointer;
+}
+.button {
+	display: flex;
+	place-content: center;
+}
+.add {
+	width: auto;
+	height: 2em;
+	display: flex;
+	color: white;
+	place-items: center;
+	place-content: center;
+	background-color: cornflowerblue;
+	border-radius: 0px 0px 6px 6px;
+	cursor: pointer;
+	font-variant: small-caps;
+	font-weight: bolder;
+}

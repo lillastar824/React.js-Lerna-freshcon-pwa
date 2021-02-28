@@ -1,0 +1,17 @@
+{
+	"comments": false,
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"targets": {
+					"node": "10.15.3"
+				},
+				"spec": true,
+				"loose": true
+			}
+		]
+	],
+  "plugins": [ "import-graphql"],
+	"ignore": ["src/index.test.js"]
+}

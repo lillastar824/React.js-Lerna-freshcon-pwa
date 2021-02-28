@@ -1,0 +1,102 @@
+.bannerimage {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+.knowrecipes {
+	display: flex;
+	overflow-x: scroll;
+	justify-content: center;
+	margin: 0.3em;
+}
+
+.bluebutton {
+	background-image: url('/Blue.svg');
+	border-width: 0;
+	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	height: 10vh;
+	width: 100%;
+	margin-right: 1em;
+	font-size: 2rem;
+}
+
+.greenbutton {
+	background-image: url('/Green.svg');
+	border-width: 0;
+	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	height: 10vh;
+	width: 100%;
+	font-size: 2rem;
+}
+
+.productlist {
+	display: flex;
+	overflow-x: scroll;
+}
+
+.product {
+	margin: 0.5em;
+}
+
+.columns {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+@media (min-width: 576px) {
+	.mobilecontent {
+		display: none;
+	}
+
+	.webcontent {
+		margin-left: 2em;
+		word-wrap: break-word;
+		width: 600px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.webcontent {
+		display: none;
+	}
+	.knowrecipes {
+		display: flex;
+		overflow-x: scroll;
+		justify-content: space-between;
+		margin: 0.3em;
+	}
+
+	.aboutfresh {
+		display: none;
+	}
+
+	.bluebutton {
+		background-image: url('/Blue.svg');
+		border-width: 0;
+		color: white;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 5px;
+		height: 13vh;
+		min-width: 330px;
+		margin-right: 1em;
+	}
+
+	.greenbutton {
+		background-image: url('/Green.svg');
+		border-width: 0;
+		color: white;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 5px;
+		height: 13vh;
+		min-width: 330px;
+	}
+}

@@ -1,0 +1,11 @@
+.contentloader {
+	width: 176px;
+	height: 192px;
+}
+
+@media only screen and (max-width: 600px) {
+	.contentloader {
+		height: 160px;
+		width: 160px;
+	}
+}

@@ -1,0 +1,14 @@
+.sales {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-content: stretch;
+}
+
+@media (max-width: 576px) {
+	.sales {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}

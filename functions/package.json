@@ -1,0 +1,50 @@
+{
+	"name": "functions",
+	"description": "Cloud Functions for Firebase",
+	"main": "dist/index.js",
+	"scripts": {
+		"serve": "firebase serve --only functions",
+		"shell": "firebase functions:shell",
+		"compile": "babel src -d dist/",
+		"build": "npm run clean && npm run compile",
+		"deploy": "firebase deploy --only functions",
+		"logs": "firebase functions:log",
+		"clean": "rimraf dist/",
+		"test": "jest src/",
+		"test:watch": "& jest --watch src",
+		"build:watch": "babel --watch src -d dist/"
+	},
+	"dependencies": {
+		"@sendgrid/mail": "^7.2.2",
+		"apollo-env": "^0.6.5",
+		"apollo-server-express": "^2.16.0",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"firebase-admin": "^9.0.0",
+		"firebase-functions": "^3.9.0",
+		"graphql": "^15.3.0",
+		"grpc": "^1.24.3",
+		"stripe": "^8.79.0",
+		"uuid": "^8.2.0"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.10.5",
+		"@babel/core": "^7.10.5",
+		"@babel/preset-env": "^7.10.4",
+		"babel-plugin-import-graphql": "^2.7.0",
+		"eslint-plugin-jest": "^23.18.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"firebase-functions-test": "^0.2.1",
+		"jest": "^26.1.0",
+		"rimraf": "^3.0.2"
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.jsx?$": "babel-jest"
+		}
+	},
+	"engines": {
+		"node": "12"
+	},
+	"private": true
+}

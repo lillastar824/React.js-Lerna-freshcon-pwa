@@ -1,0 +1,38 @@
+{
+	"folders": [
+		{
+			"name": "Root",
+			"path": "./"
+		},
+		{
+			"name": "Driver",
+			"path": "./driver"
+		},
+		{
+			"name": "Shop",
+			"path": "./shop"
+		},
+		{
+			"name": "Farmer",
+			"path": "./farmer"
+		},
+		{
+			"name": "Functions",
+			"path": "./functions"
+		},
+		{
+			"name": "Greenery",
+			"path": "./greenery"
+		}
+	],
+	"settings": {
+		"jest.disabledWorkspaceFolders": [
+			"Root",
+			"Shop",
+			"Farmer",
+			"Functions",
+			"greenery"
+		],
+		"browser-preview.startUrl": "http://localhost:3000"
+	}
+}

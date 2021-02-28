@@ -1,0 +1,26 @@
+{
+	"name": "@greenery/all",
+	"version": "0.0.2",
+	"description": "freshconn ui kit",
+	"scripts": {
+		"stories": "start-storybook -p 9001 -c storybook",
+		"build": "babel -D ./src -d lib",
+		"develop": "babel --watch -D ./src -d lib",
+		"bundle": "webpack --mode production",
+		"clean": "rimraf dist/ lib/"
+	},
+	"main": "lib/index.js",
+	"type": "module",
+	"author": "",
+	"license": "private",
+	"devDependencies": {
+		"@babel/cli": "^7.8.4",
+		"@babel/core": "^7.8.4",
+		"@babel/preset-env": "^7.8.4",
+		"@babel/preset-react": "^7.8.3",
+		"babel-loader": "^8.0.6",
+		"eslint": "^6.8.0",
+		"webpack": "^4.41.5",
+		"webpack-cli": "^3.3.10"
+	}
+}

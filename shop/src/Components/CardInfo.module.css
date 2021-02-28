@@ -1,0 +1,13 @@
+.card {
+	display: grid;
+	justify-content: space-around;
+	align-items: center;
+	grid-template-columns: 1fr auto;
+}
+.card .date {
+	display: flex;
+	place-content: center;
+}
+.card .brand {
+	display: flex;
+}

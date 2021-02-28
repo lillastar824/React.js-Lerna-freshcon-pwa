@@ -1,0 +1,4 @@
+dist/
+lib/
+storybook_static/
+node_modules/
